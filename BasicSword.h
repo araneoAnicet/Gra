@@ -1,5 +1,6 @@
 #include "src/Weapon.h"
 
-class Bow : public Weapon {
-
+class BasicSword : public Weapon {
+public:
+    BasicSword();
 };

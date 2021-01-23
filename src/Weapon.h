@@ -1,9 +1,7 @@
 #pragma once
 #include "Param.h"
-#include "Coordinates.h"
-#include "TickHandler.h"
 
-class Weapon : public TickHandler {
+class Weapon {
 protected:
     Param* reach_distance;
     Param* damage;
