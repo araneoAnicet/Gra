@@ -2,10 +2,9 @@
 #include "Param.h"
 
 class Weapon {
-protected:
+public:
     Param* reach_distance;
     Param* damage;
     Param* cooldown;
-public:
     ~Weapon();
 };
