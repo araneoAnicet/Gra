@@ -49,11 +49,13 @@ void Game::start(Entity* hero, Entity* enemy) {
     std::cout << "Much result: " << std::endl;
     if (hero->health->is_empty()) {
         std::cout << "Hero is dead" << std::endl;
+        enemy->experience->increase_by(0.5 * hero->experience->get());
     } else {
         std::cout << "Hero is alive" << std::endl;
     }
     if (enemy->health->is_empty()) {
         std::cout << "Enemy is dead" << std::endl;
+        hero->experience->increase_by(0.5 * enemy->experience->get());
     } else {
         std::cout << "Enemy is alive" << std::endl;
     }

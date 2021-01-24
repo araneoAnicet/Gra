@@ -9,6 +9,7 @@ public:
     Param* health;
     Param* level;
     Param* damage_resistance;
+    Param* experience;
     void set_weapon(Weapon* weapon);
     void set_health(Param* health);
     void set_level(Param* level);
