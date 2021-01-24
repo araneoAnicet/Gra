@@ -22,3 +22,7 @@ void Entity::set_level(Param* level) {
 void Entity::set_weapon(Weapon* weapon) {
     this->weapon = weapon;
 }
+
+void Entity::set_experience(Param* experience) {
+    this->experience = experience;
+}

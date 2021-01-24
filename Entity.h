@@ -13,6 +13,7 @@ public:
     void set_weapon(Weapon* weapon);
     void set_health(Param* health);
     void set_level(Param* level);
+    void set_experience(Param* experience);
     void set_damage_resistance(Param* damage_resistance);
     ~Entity();
 };
