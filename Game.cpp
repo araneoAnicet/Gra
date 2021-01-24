@@ -26,7 +26,7 @@ void Game::start(Entity* hero, Entity* enemy) {
         std::cout << "Game tick " << tick_counter << ": ";
         if (hero->weapon->cooldown->is_empty()) {
             if (hero->weapon->reach_distance->get() >= distance) {
-                damage_enemy_receives = (1 - enemy->damage_resistance->get()) * hero->weapon->damage->get();
+                damage_enemy_receives = (1 - 0.01 * enemy->damage_resistance->get()) * hero->weapon->damage->get();
                 enemy->health->decrease_by(damage_enemy_receives);
                 std::cout << "HERO DELIVERS " << damage_enemy_receives << " DAMAGE POINTS!" << std::endl;
                 std::cout << ">> Hero's health: " << hero->health->get() << "/" << hero->health->get_max() << std::endl;
@@ -36,7 +36,7 @@ void Game::start(Entity* hero, Entity* enemy) {
 
         if (enemy->weapon->cooldown->is_empty()) {
             if (enemy->weapon->reach_distance->get() >= distance) {
-                damage_hero_receives = (1 - hero->damage_resistance->get()) * enemy->weapon->damage->get();
+                damage_hero_receives = (1 - 0.01 * hero->damage_resistance->get()) * enemy->weapon->damage->get();
                 hero->health->decrease_by(damage_hero_receives);
                 std::cout << "ENEMY DELIVERS " << damage_hero_receives << " DAMAGE POINTS!" << std::endl;
                 std::cout << ">> Hero's health: " << hero->health->get() << "/" << hero->health->get_max() << std::endl;

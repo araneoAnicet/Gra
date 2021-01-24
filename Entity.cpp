@@ -3,7 +3,7 @@
 Entity::~Entity() {
     delete this->damage_resistance;
     delete this->health;
-    delete this->level;
+    delete this->experience;
     delete this->weapon;
 }
 
@@ -13,10 +13,6 @@ void Entity::set_damage_resistance(Param* damage_resistance) {
 
 void Entity::set_health(Param* health) {
     this->health = health;
-}
-
-void Entity::set_level(Param* level) {
-    this->level = level;
 }
 
 void Entity::set_weapon(Weapon* weapon) {

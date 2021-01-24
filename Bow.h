@@ -1,5 +1,5 @@
 #pragma once
-#include "Param.h"
+#include "src/Param.h"
 #include "src/Weapon.h"
 
 class Bow: public Weapon {

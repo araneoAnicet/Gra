@@ -1,5 +1,11 @@
 #include "Param.h"
 
+Param::Param(int min_points, int max_points, int current) {
+    this->max_points = min_points;
+    this->max_points = max_points;
+    this->current = current;
+}
+
 void Param::increase_by(int value) {
     if (this->current + value > this->max_points) {
         this->current = this->max_points;
